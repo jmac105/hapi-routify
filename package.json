@@ -43,7 +43,10 @@
     "url": "https://github.com/g-div/hapi-routify/issues"
   },
   "keywords": [
-    "hapi"
+    "hapi",
+    "router",
+    "routes",
+    "routify"
   ],
   "license": "MIT"
 }
