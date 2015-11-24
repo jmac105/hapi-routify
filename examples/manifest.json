@@ -1,0 +1,30 @@
+{
+    "server": {
+        "app": {
+            "name": "simple proxy"
+        }
+    },
+    "connections": [{
+        "port": 8000,
+        "host": "localhost",
+        "labels": ["proxy"]
+    }],
+    "plugins": [{
+      "h2o2": {}
+    }, {
+      "./": {
+        "routes": [{
+          "method": "GET",
+          "path": "/{path*}",
+          "handler": {
+            "proxy": {
+              "host": "localhost",
+              "port": 1337
+            }
+          }
+        }]
+      }
+    }, {
+      "blipp": {}
+    }]
+}

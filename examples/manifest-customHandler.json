@@ -1,0 +1,29 @@
+{
+    "server": {
+        "app": {
+            "name": "simple proxy"
+        }
+    },
+    "connections": [{
+        "port": 8000,
+        "host": "localhost",
+        "labels": ["proxy"]
+    }],
+    "plugins": [{
+      "./examples/customHandler": {}
+    }, {
+      "./": {
+        "routes": [{
+          "method": "GET",
+          "path": "/{path*}",
+          "handler": {
+            "custom": {
+              "message": "hello world!"
+            }
+          }
+        }]
+      }
+    }, {
+      "blipp": {}
+    }]
+}
