@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Just some lines of code to let you declare hapi routes from a manifest.json",
   "devDependencies": {
-    "babel": "^5.2.6",
+    "babel": "^6.1.18",
     "blipp": "^2.3.0",
     "code": "^1.4.0",
     "h2o2": "^4.0.2",
