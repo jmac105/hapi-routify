@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "Just some lines of code to let you declare hapi routes from a manifest.json",
   "devDependencies": {
-    "babel": "^6.1.18",
+    "babel-cli": "^6.2.0",
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
     "blipp": "^2.3.0",
     "code": "^1.4.0",
     "h2o2": "^4.0.2",
@@ -21,7 +23,7 @@
   "main": "dist/index.js",
   "scripts": {
     "pretest": "npm run compile",
-    "test": "lab --transform test/transformer.js -t 100",
+    "test": "lab --transform test/transformer.js -t 100 --ignore __core-js_shared__",
     "precoverage": "npm run compile",
     "coverage": "lab --transform test/transformer.js -r html -o coverage.html",
     "compile": "babel -s -d dist/ src/",
