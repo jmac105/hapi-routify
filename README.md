@@ -71,11 +71,11 @@ Package | Version | Dev
 [babel-core](https://www.npmjs.com/package/babel-core) | ^6.2.1 | ✔
 [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) | ^6.1.18 | ✔
 [blipp](https://www.npmjs.com/package/blipp) | ^2.3.0 | ✔
-[code](https://www.npmjs.com/package/code) | ^1.4.0 | ✔
+[code](https://www.npmjs.com/package/code) | ^2.0.1 | ✔
 [h2o2](https://www.npmjs.com/package/h2o2) | ^4.0.2 | ✔
 [hapi](https://www.npmjs.com/package/hapi) | ^11.1.1 | ✔
 [husky](https://www.npmjs.com/package/husky) | ^0.10.2 | ✔
-[lab](https://www.npmjs.com/package/lab) | ^5.8.0 | ✔
+[lab](https://www.npmjs.com/package/lab) | ^7.3.0 | ✔
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
 [npm-run-all](https://www.npmjs.com/package/npm-run-all) | ^1.3.1 | ✔
 [rejoice](https://www.npmjs.com/package/rejoice) | ^2.2.1 | ✔
