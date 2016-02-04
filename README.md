@@ -67,6 +67,7 @@ If you use *rejoice* there are actually two ways to provide your own handler:
 
 Package | Version | Dev
 --- |:---:|:---:
+[husky](https://www.npmjs.com/package/husky) | ^0.10.2 | ✖
 [babel-cli](https://www.npmjs.com/package/babel-cli) | ^6.2.0 | ✔
 [babel-core](https://www.npmjs.com/package/babel-core) | ^6.2.1 | ✔
 [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) | ^6.1.18 | ✔
@@ -74,7 +75,6 @@ Package | Version | Dev
 [code](https://www.npmjs.com/package/code) | ^2.0.1 | ✔
 [h2o2](https://www.npmjs.com/package/h2o2) | ^5.0.0 | ✔
 [hapi](https://www.npmjs.com/package/hapi) | ^13.0.0 | ✔
-[husky](https://www.npmjs.com/package/husky) | ^0.10.2 | ✔
 [lab](https://www.npmjs.com/package/lab) | ^8.0.0 | ✔
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
 [npm-run-all](https://www.npmjs.com/package/npm-run-all) | ^1.3.1 | ✔
