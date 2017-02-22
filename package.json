@@ -13,7 +13,7 @@
     "hapi": "^14.0.0",
     "lab": "^10.3.1",
     "node-readme": "^0.1.9",
-    "npm-run-all": "^2.1.0",
+    "npm-run-all": "^4.0.2",
     "rejoice": "^3.0.0"
   },
   "peerDependencies": {
