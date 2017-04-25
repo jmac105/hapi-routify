@@ -51,6 +51,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "husky": "^0.11.4"
+    "husky": "^0.13.3"
   }
 }
