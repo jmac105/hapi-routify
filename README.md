@@ -1,5 +1,7 @@
 # hapi-routify
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/g-div/hapi-routify.svg)](https://greenkeeper.io/)
+
 [![npm](https://img.shields.io/npm/v/hapi-routify.svg)](http://npmjs.org/package/hapi-routify) [![travis-status](https://img.shields.io/travis/g-div/hapi-routify.svg)](https://travis-ci.org/g-div/hapi-routify)
 
 Just some lines of code to let you declare hapi routes from a manifest.json
