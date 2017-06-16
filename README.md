@@ -1,7 +1,5 @@
 # hapi-routify
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/g-div/hapi-routify.svg)](https://greenkeeper.io/)
-
 [![npm](https://img.shields.io/npm/v/hapi-routify.svg)](http://npmjs.org/package/hapi-routify) [![travis-status](https://img.shields.io/travis/g-div/hapi-routify.svg)](https://travis-ci.org/g-div/hapi-routify)
 
 Just some lines of code to let you declare hapi routes from a manifest.json
@@ -35,23 +33,26 @@ If you use [hapi](http://hapijs.com) with [glue](https://github.com/hapijs/glue)
         "host": "localhost",
         "labels": ["proxy"]
     }],
-    "plugins": [{
-      "h2o2": {}
+    "registrations": [{
+      "plugin": "h2o2"
     }, {
-      "hapi-routify": {
-        "routes": [{
-          "method": "GET",
-          "path": "/{path*}",
-          "handler": {
-            "proxy": {
-              "host": "localhost",
-              "port": 1337
+      "plugin": {
+        "register": "hapi-routify",
+        "options": {
+          "routes": [{
+            "method": "GET",
+            "path": "/{path*}",
+            "handler": {
+              "proxy": {
+                "host": "localhost",
+                "port": 1337
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     }, {
-      "blipp": {}
+      "plugin": "blipp"
     }]
 }
 ```
@@ -77,7 +78,7 @@ Package | Version | Dev
 [h2o2](https://www.npmjs.com/package/h2o2) | ^5.0.0 | ✔
 [hapi](https://www.npmjs.com/package/hapi) | ^16.1.1 | ✔
 [husky](https://www.npmjs.com/package/husky) | ^0.13.3 | ✔
-[lab](https://www.npmjs.com/package/lab) | ^13.0.2 | ✔
+[lab](https://www.npmjs.com/package/lab) | ^14.0.1 | ✔
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
 [npm-run-all](https://www.npmjs.com/package/npm-run-all) | ^4.0.2 | ✔
 [rejoice](https://www.npmjs.com/package/rejoice) | ^4.0.0 | ✔
@@ -86,7 +87,7 @@ Package | Version | Dev
 ## Contribute
 
 Contributions are welcome!
-Open an [issue](https://github.com/g-div/hapi-routify/issues) to report bugs or request features. 
+Open an [issue](https://github.com/g-div/hapi-routify/issues) to report bugs or request features.
 To contribute with code:
 - clone this repository
 - install the dependencies with ```npm install```
