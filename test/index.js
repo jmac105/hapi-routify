@@ -41,6 +41,47 @@ describe("hapi-routify", () => {
         });
     });
 
+    it("can set up a route when passed dependencies", (done) => {
+        const result = {hello: "world"};
+
+        const options = {
+            routes: [{
+                method: "GET",
+                path: "/",
+                handler: function(request, reply) {
+                    reply(result);
+                }
+            }],
+            dependencies: ["mock-plugin"]
+        };
+
+        const server = new Hapi.Server();
+        server.connection();
+
+
+        server.register({register: require("../dist/index.js"), options: options}, (error) => {
+
+            expect(error).to.not.exist();
+
+            server.register({register: require("./mockPlugin"), options: {}}, (err) => {
+
+                expect(err).to.not.exist();
+
+                server.initialize((_err) => {
+
+                    expect(_err).to.not.exist();
+
+                    server.inject('/', (res) => {
+
+                        expect(res.result).to.equal(result);
+
+                        done();
+                    });
+                });
+            });
+        });
+    });
+
     it("doesn't setup any route, passing no arguments", (done) => {
 
         const options = {};

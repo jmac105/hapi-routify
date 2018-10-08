@@ -22,7 +22,8 @@
               "port": 1337
             }
           }
-        }]
+        }],
+        "dependencies": ["h2o2"]
       }
     }, {
       "blipp": {}
