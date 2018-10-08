@@ -33,23 +33,26 @@ If you use [hapi](http://hapijs.com) with [glue](https://github.com/hapijs/glue)
         "host": "localhost",
         "labels": ["proxy"]
     }],
-    "plugins": [{
-      "h2o2": {}
+    "registrations": [{
+      "plugin": "h2o2"
     }, {
-      "hapi-routify": {
-        "routes": [{
-          "method": "GET",
-          "path": "/{path*}",
-          "handler": {
-            "proxy": {
-              "host": "localhost",
-              "port": 1337
+      "plugin": {
+        "register": "hapi-routify",
+        "options": {
+          "routes": [{
+            "method": "GET",
+            "path": "/{path*}",
+            "handler": {
+              "proxy": {
+                "host": "localhost",
+                "port": 1337
+              }
             }
-          }
-        }]
+          }]
+        }
       }
     }, {
-      "blipp": {}
+      "plugin": "blipp"
     }]
 }
 ```
@@ -67,24 +70,24 @@ If you use *rejoice* there are actually two ways to provide your own handler:
 
 Package | Version | Dev
 --- |:---:|:---:
-[husky](https://www.npmjs.com/package/husky) | ^0.10.2 | ✖
 [babel-cli](https://www.npmjs.com/package/babel-cli) | ^6.2.0 | ✔
 [babel-core](https://www.npmjs.com/package/babel-core) | ^6.2.1 | ✔
 [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) | ^6.1.18 | ✔
 [blipp](https://www.npmjs.com/package/blipp) | ^2.3.0 | ✔
-[code](https://www.npmjs.com/package/code) | ^2.0.1 | ✔
+[code](https://www.npmjs.com/package/code) | ^4.0.0 | ✔
 [h2o2](https://www.npmjs.com/package/h2o2) | ^5.0.0 | ✔
-[hapi](https://www.npmjs.com/package/hapi) | ^13.0.0 | ✔
-[lab](https://www.npmjs.com/package/lab) | ^8.0.0 | ✔
+[hapi](https://www.npmjs.com/package/hapi) | ^16.1.1 | ✔
+[husky](https://www.npmjs.com/package/husky) | ^0.13.3 | ✔
+[lab](https://www.npmjs.com/package/lab) | ^14.0.1 | ✔
 [node-readme](https://www.npmjs.com/package/node-readme) | ^0.1.9 | ✔
-[npm-run-all](https://www.npmjs.com/package/npm-run-all) | ^1.3.1 | ✔
-[rejoice](https://www.npmjs.com/package/rejoice) | ^3.0.0 | ✔
+[npm-run-all](https://www.npmjs.com/package/npm-run-all) | ^4.0.2 | ✔
+[rejoice](https://www.npmjs.com/package/rejoice) | ^4.0.0 | ✔
 
 
 ## Contribute
 
 Contributions are welcome!
-Open an [issue](https://github.com/g-div/hapi-routify/issues) to report bugs or request features. 
+Open an [issue](https://github.com/g-div/hapi-routify/issues) to report bugs or request features.
 To contribute with code:
 - clone this repository
 - install the dependencies with ```npm install```
